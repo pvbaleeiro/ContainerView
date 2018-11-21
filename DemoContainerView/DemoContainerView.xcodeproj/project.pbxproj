@@ -25,6 +25,7 @@
 		46C5192A2126267B00A6F607 /* ContainerScrollDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C519272126267B00A6F607 /* ContainerScrollDelegate.m */; };
 		4A274ACC219D7BBD008900D9 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A274ACB219D7BBD008900D9 /* UIView+Frame.m */; };
 		4A9527E520F8EB4D000DFDFB /* DemoCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9527E320F8EB4D000DFDFB /* DemoCollectionDataSource.m */; };
+		852FE9F421A46AA300AF29B0 /* ContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852FE9F321A46AA300AF29B0 /* ContainerType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		4A274ACB219D7BBD008900D9 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		4A9527E320F8EB4D000DFDFB /* DemoCollectionDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoCollectionDataSource.m; sourceTree = "<group>"; };
 		4A9527E420F8EB4D000DFDFB /* DemoCollectionDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoCollectionDataSource.h; sourceTree = "<group>"; };
+		852FE9F221A46AA300AF29B0 /* DemoContainerView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoContainerView-Bridging-Header.h"; sourceTree = "<group>"; };
+		852FE9F321A46AA300AF29B0 /* ContainerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,7 @@
 		4689A7B620EC081A00BC7C8A /* DemoContainerView */ = {
 			isa = PBXGroup;
 			children = (
+				852FE9F121A46A7D00AF29B0 /* Swift */,
 				4689A7B720EC081A00BC7C8A /* AppDelegate.h */,
 				4689A7B820EC081A00BC7C8A /* AppDelegate.m */,
 				4A274ACA219D7BBD008900D9 /* UIView+Frame.h */,
@@ -197,6 +201,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		852FE9F121A46A7D00AF29B0 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				852FE9F221A46AA300AF29B0 /* DemoContainerView-Bridging-Header.h */,
+				852FE9F321A46AA300AF29B0 /* ContainerType.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -228,6 +241,7 @@
 				TargetAttributes = {
 					4689A7B320EC081A00BC7C8A = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -282,6 +296,7 @@
 				46C5192A2126267B00A6F607 /* ContainerScrollDelegate.m in Sources */,
 				46C519292126267B00A6F607 /* ContainerView.m in Sources */,
 				4689A7B920EC081A00BC7C8A /* AppDelegate.m in Sources */,
+				852FE9F421A46AA300AF29B0 /* ContainerType.swift in Sources */,
 				4A274ACC219D7BBD008900D9 /* UIView+Frame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +437,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y7546NLJW9;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -431,6 +447,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mrusta.containerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DemoContainerView/Swift/DemoContainerView-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -439,6 +458,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y7546NLJW9;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -448,6 +468,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mrusta.containerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DemoContainerView/Swift/DemoContainerView-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
